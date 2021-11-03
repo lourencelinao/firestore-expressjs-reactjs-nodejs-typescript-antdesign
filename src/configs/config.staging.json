@@ -1,0 +1,11 @@
+{
+  "REACT_FIREBASE_CONFIG": {
+      "apiKey": "AIzaSyAJ9GKpO4O9HfRITEp-uqgxRflajzUw4fo",
+      "authDomain": "surgtech-staging.firebaseapp.com",
+      "projectId": "surgtech-staging",
+      "storageBucket": "surgtech-staging.appspot.com",
+      "messagingSenderId": "898556242546",
+      "appId": "1:898556242546:web:525887a477f9bf10b030eb",
+      "measurementId": "G-58FTDBQ63E"
+  }
+}

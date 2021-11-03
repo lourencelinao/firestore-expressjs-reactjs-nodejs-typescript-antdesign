@@ -1,0 +1,11 @@
+{
+  "REACT_FIREBASE_CONFIG": {
+      "apiKey": "AIzaSyCxhqHAST5ELrHaQQP4zYIOweTuLDzWTNQ",
+      "authDomain": "surgtech-prod.firebaseapp.com",
+      "projectId": "surgtech-prod",
+      "storageBucket": "surgtech-prod.appspot.com",
+      "messagingSenderId": "814575916297",
+      "appId": "1:814575916297:web:1f14cd5831fba1b9d06fd8",
+      "measurementId": "G-FMN68ZE2V7"
+  }
+}

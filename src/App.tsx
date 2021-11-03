@@ -1,25 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import { ContextProvider } from 'components';
+import routes from 'constants/routes';
+import { DashboardPage, LoginPage, NotFoundPage } from 'pages';
+import AuthorizedRoute from 'routes/AuthorizedRoute';
+import UnauthorizedRoute from 'routes/UnauthorizedRoute';
+
+const AUTH_REDIRECT = routes.ROOT;
+const UNAUTH_REDIRECT = routes.LOGIN;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ContextProvider>
+      <Router>
+        <Switch>
+          <AuthorizedRoute
+            exact
+            path={routes.ROOT}
+            component={DashboardPage}
+            redirect={UNAUTH_REDIRECT}
+          />
+          <UnauthorizedRoute
+            exact
+            path={routes.LOGIN}
+            component={LoginPage}
+            redirect={AUTH_REDIRECT}
+          />
+          <Route component={NotFoundPage} />
+        </Switch>
+      </Router>
+    </ContextProvider>
   );
 }
 
